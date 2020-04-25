@@ -15,7 +15,8 @@ export const Button = styled.button`
         `}
 
   color: #fff;
-  background-color: ${(props) => (props.secondary ? `#fdd54f` : `#f8049c`)};
+  background-color: ${(props) =>
+    props.secondary ? props.theme.secondaryColor : props.theme.primaryColor};
   font-weight: 8px;
   box-shadow: none;
   border: none;

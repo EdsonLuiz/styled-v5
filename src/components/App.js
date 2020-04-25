@@ -1,6 +1,6 @@
 import React from "react";
 // import { Button } from "./common/";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
@@ -22,9 +22,14 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const theme = {
+  primaryColor: "#f8049c",
+  secondaryColor: "#fdd54f",
+};
+
 export default function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <BrowserRouter>
         <Switch>
@@ -32,6 +37,6 @@ export default function App() {
           <Route path="/login" component={Login} />
         </Switch>
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 }
