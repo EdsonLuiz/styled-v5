@@ -27,9 +27,9 @@ const Notch = styled.div`
   transform: translate(${(p) => (p.isActive ? `26px` : `1px`)});
 `;
 
-export const Toggle = ({ isActive }) => {
+export const Toggle = ({ isActive, onToggle }) => {
   return (
-    <ToggleWrapper>
+    <ToggleWrapper onClick={onToggle}>
       <Notch isActive={isActive} />
     </ToggleWrapper>
   );

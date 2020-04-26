@@ -8,6 +8,8 @@ const Content = styled.main`
   margin: 80px auto 0 auto;
   padding: 0 16px;
   font-family: "Open Sans", sans-serif;
+  background-color: ${(p) => p.theme.background};
+  color: ${(p) => p.theme.front};
 
   h1,
   h2,
